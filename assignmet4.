@@ -1,0 +1,43 @@
+Q 1.How to add JavaScript to html?
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+Q2 How to calculate the perimeter and area of a circle using JavaScript?
+function circle(radius)
+{
+    this.radius = radius;
+  // area method
+    this.area = function () 
+    {
+        return Math.PI * this.radius * this.radius;
+    };
+  // perimeter method
+    this.perimeter = function ()
+    {
+        return 2*Math.PI*this.radius;
+    };
+}
+var c = new circle(3);
+console.log('Area =', c.area().toFixed(2));
+console.log('perimeter =', c.perimeter().toFixed(2));
+Q3 How to make a text italic using JavaScript?
+<html>
+<head>
+   <title>JavaScript String italics() Method</title>
+</head>
+<body>
+   <h3> Using the <i> italics() </i> method to make a text italic using JavaScript </h3>
+   <p id="para"> </p>
+   <script>
+      var text = "Welcome to the JavaScript";
+      document.getElementById('para').innerHTML = text.italics();
+   </script>
+</body>
+</html>
+
+Q4 How to get all checked checkbox
+@FluffyBeing yes, to get to the input by its name you can use: $('input[name="input_name"]:checked') or $('input[name="input_name"]').filter(':checked')
+Q6How to add object in array using JavaScript?
+var a=[], b={};
+a.push(b);    
+// a[0] === b;
